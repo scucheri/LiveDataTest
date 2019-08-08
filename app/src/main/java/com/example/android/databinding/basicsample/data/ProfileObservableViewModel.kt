@@ -64,11 +64,15 @@ class ProfileLiveDataViewModel : ViewModel() {
         _xytestData.value?.apply {
             innerData.homeTown = innerData.homeTown + "——湖南"
         }
-        _xytestData.postValue(_xytestData.value) // 最后会调用到LiveData的setValue
+//        _xytestData.postValue(_xytestData.value) // 最后会调用到LiveData的setValue
 
-//        _xytestData.value = XyTestData()
+        _xytestData.value = _xytestData.value
         //        _xytestData.value?.innerData?.homeTown = _xytestData.value?.innerData?.homeTown + "——湖南"
 
+    }
+
+    fun changeName() {
+       _name.value = _name.value + "小玉米"
     }
 }
 
