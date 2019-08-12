@@ -22,6 +22,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.android.databinding.basicsample.R
 import com.example.android.databinding.basicsample.databinding.ActivityMainXiaoyuBinding
+import com.example.android.databinding.basicsample.ui.observers.NameInfoMgrLifeCycleObserverNoViewModel
 
 /**
  * Shows a menu.
@@ -46,6 +47,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.viewmodelxiaoyuActivityButton.setOnClickListener({
             startActivity(Intent(this, ViewModelActivityXiaoyu::class.java))
+        })
+
+        binding.viewmodelxiaoyuActivityButtonNoViewmodel.setOnClickListener({
+            startActivity(Intent(this, ViewModelActivityXiaoyuBindingActivity::class.java))
         })
     }
 }

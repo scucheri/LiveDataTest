@@ -1,5 +1,6 @@
 package com.example.android.databinding.basicsample.ui.observers;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.Observer;
@@ -12,9 +13,9 @@ import com.example.android.databinding.basicsample.databinding.ViewmodelProfileX
  */
 public class NameInfoMgrLifeCycleObserver extends BaseLifeCycleObserver {
 
-    public NameInfoMgrLifeCycleObserver(AppCompatActivity activity,
-                                        ViewmodelProfileXiaoyuBinding binding,
-                                        ProfileLiveDataViewModel viewModel) {
+    public NameInfoMgrLifeCycleObserver(@NonNull  AppCompatActivity activity,
+                                        @NonNull ViewmodelProfileXiaoyuBinding binding,
+                                        @NonNull ProfileLiveDataViewModel viewModel) {
         super(activity, binding, viewModel);
     }
 
